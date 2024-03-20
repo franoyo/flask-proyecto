@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/form.css') }}"
+    />
+  </head>
+  <body>
+    {% include 'alerta_eliminar.html' %}  {% with
+    messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% include 'alertaSuccess.html' %}
+    <script>
+      const alert = document.getElementById("alertita");
+      setTimeout(() => {
+        alert.classList.add("see");
+      }, 350);
+      setTimeout(() => {
+        alert.classList.remove("see");
+      }, 3500);
+    </script>
+    {% endif %}
+    {% endwith %}
+    <a href="{{url_for('crud')}}" id="abrir-crud">ATRAS</a>
+    <a id="cerrar" href="{{url_for('logout')}}">CERRAR SESION </a>
+    <header class="header-container">EDITAR CURSO</header>
+    <main class="form-container">
+      <form class="formulario" action="/update/{{c.0}}" method="post">
+        <div class="cont">CODIGO DEL CURSO</div>
+        <div class="cont">
+          <input class="input" type="number" name="codigo" value="{{c.1}}" required />
+        </div>
+        <div class="cont">NOMBRE DEL CURSO</div>
+        <div class="cont">
+          <input class="input" type="text" name="nombre" value="{{c.2}}" required />
+        </div>
+        <div class="cont">NUMERO DE HORAS DEL CURSO</div>
+        <div class="cont">
+          <input class="input" type="number" name="horas" value="{{c.3}}" required />
+        </div>
+        <div class="cont">AREA DE CONOCIMIENTO</div>
+        <div class="cont">
+          <input class="input" type="text" name="area" value="{{c.4}}" required />
+        </div>
+        <div class="put-button">
+          <input type="submit" id="btn" value="EDITAR" />
+        </div>
+      </form>
+    </main>
+   
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

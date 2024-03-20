@@ -1,0 +1,56 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.scs{
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: 5;
+    
+}
+.scs .alerta{
+    width: 25%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background:linear-gradient(to left top, #7c55bb, #544698, #313674, #15244f, #04122c);
+    border-radius: 1.2vw;
+    box-shadow: 3vw 2vw 1.5vw 0.2vw rgba(0,0,0,0.75);
+
+}
+.alerta .put-img{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.put-img .img{
+    width: 70%;
+    height: 100%;
+}
+.alerta .put-text{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    font-size: 1.2vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: cursive;
+    color: white;
+
+}
+.see{
+    opacity: 1;
+}

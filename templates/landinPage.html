@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleLanding.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+   <header class="cabecera-container">
+    <div class="put-img">
+        <img class="logo" src="{{ url_for('static', filename='img/logo flask.png') }}" alt="">
+    </div>
+    <nav class="put-link">
+        <a id="icon" href="{{url_for('login')}}"><i class="bi bi-door-open-fill"></i></a>
+        <a id="letter" href="{{url_for('login')}}">Iniciar sesion</a>
+    </nav>
+   </header>
+   <main class="maincontent-container">
+    <div class="main-image"><img class="img" src="{{ url_for('static', filename='img/a epic classrro dc08dbcd-587e-4fca-a042-cf20c97149e1.png') }}" alt=""></div>
+    <div class="container-subimages">
+        <div class="divi">
+            <p>GESTIONA LAS HORAS DE LOS CURSOS</p>
+        </div>
+        <div class="divi1">
+           <p>AGREGA NUEVOS CURSOS</p> 
+        </div>
+        <div class="divi2">
+            <p>GESTIONA LAS AREAS DE CONOCIMIENTO</p>
+        </div>
+        
+    </div>
+   </main> 
+   <footer class="footer-container">
+    @2017-2024
+   </footer>
+</body>
+</html>

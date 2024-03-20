@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleLogin.css') }}">
+</head>
+
+<body>
+    {% with
+        messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% include 'alertaSuccess.html' %}
+        <script>
+          const alert = document.getElementById("alertita");
+          setTimeout(() => {
+            alert.classList.add("see");
+          }, 350);
+          setTimeout(() => {
+            alert.classList.remove("see");
+          }, 2200);
+        </script>
+        {% endif %}
+        {% endwith %}
+    <div class="main-container" >
+        <form class="container-login-new" action="{{url_for('registro')}}" id="container-registro" method="post">
+            <div class="put-logo">
+                <img class="img" src="{{ url_for('static', filename='img/logo flask.png') }}" alt="">
+            </div>
+            <div class="put-title">
+                POR FAVOR REGISTRESE
+            </div>
+            <div class="put-input">
+                <input class="inp" type="email" name="username" placeholder="CORREO:">
+            </div>
+            <div class="put-input">
+                <input class="inp" type="password" name="password" placeholder="CONTRASEÑA:">
+            </div>
+            <div class="put-text">
+                <input type="checkbox" id="mi_checkbox" name="mi_checkbox" value="valor">
+                <label for="mi_checkbox">Recordar Mi Cuenta</label>
+            </div>
+            <div class="final">
+                <input class="btn" id="btn" type="submit" value="REGISTRARSE">
+                <input class="btn" type="button" value="Volver" id="volver">
+            </div>
+            <div class="final">
+                @2017-2024
+            </div>
+
+
+        </form>
+
+        <form class="container-login" id="container-login" action="{{url_for('login')}}" method="post">
+            <div class="put-logo">
+                <a href="{{url_for('index')}}"><img class="img" src="{{ url_for('static', filename='img/logo flask.png') }}" alt=""></a>
+            </div>
+            <div class="put-title">
+                POR FAVOR LOGUEATE!
+            </div>
+            <div class="put-input">
+                <input class="inp" name="correo" type="email" placeholder="CORREO:">
+            </div>
+            <div class="put-input">
+                <input class="inp" name="contraseña" type="password" placeholder="CONTRASEÑA:">
+            </div>
+            <div class="put-text">
+                <input type="checkbox" id="mi_checkbox" name="mi_checkbox" value="valor">
+                <label for="mi_checkbox">Recordar Mi Cuenta</label>
+            </div>
+            <div class="final">
+                <input class="btn" type="submit" value="INICIAR SESION">
+            </div>
+            <div class="final">
+                @2017-2024
+                <input class="btn" id="button" type="button" value="No tiene Cuenta Registrese Aqui!">
+            </div>
+
+
+        </form>
+
+    </div>
+<script src="{{ url_for('static', filename='js/scriptLoginAndRegister.js') }}"></script>
+</body>
+
+</html>

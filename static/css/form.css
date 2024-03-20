@@ -1,0 +1,123 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+.header-container{
+width: 100%;
+height: 20vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-size: 2.4vw;
+font-family: cursive;
+font-weight: 800;
+background-color: #8BE696;
+color: black;
+
+}
+.form-container{
+    width: 100%;
+    height: 80vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D6E6B3;
+}
+.form-container .formulario{
+width: 35%;
+height: 95%;
+display: flex;
+flex-direction: column;
+background-color: #83e2ce;
+border-radius:1vw ;
+
+}
+.formulario .cont{
+width: 100%;
+height: 10%;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+font-size: 1.2vw;
+font-family: cursive;
+color: black;
+
+}
+.formulario .put-button{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont .input{
+width: 65%;
+height: 60%;
+display: flex;
+font-size: 1.3vw;
+border-radius: 0.4vw;
+border: solid 0.2vw #A6E630;
+font-size: 1.2vw;
+}
+#btn{
+    width: 25%;
+    height: 25%;
+    display: flex;
+    background-color: #A6E630;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1vw;
+    border: solid 0.2vw #1CEB3B;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#btn:hover{
+    transform: scale(1.2);
+}
+#abrir-crud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.5%;
+    height: 5%;
+    position: fixed;
+    left: 85%;
+    bottom: 3%;
+    font-size: 1vw;
+    background-color: #25E6C5;
+    color: black;
+    transition: 0.5s;
+    font-family: cursive;
+    cursor: pointer;
+
+}
+#abrir-crud:hover{
+    transform: scale(1.2);
+
+}
+#cerrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.5%;
+    height: 5%;
+    position: fixed;
+    right: 85%;
+    bottom: 3%;
+    font-size: 1vw;
+    background-color: #1CEB3B;
+    color: black;
+    transition: 0.5s;
+    border: solid black 0.1vw;
+    text-decoration: none;
+    font-family: cursive;
+    cursor: pointer;
+}
+#cerrar:hover{
+    transform: scale(1.2);
+}

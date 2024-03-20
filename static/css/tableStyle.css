@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-bordes:#003B47;
+    --color-interno-tabla:#00BFE6;
+}
+.main-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.35);;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: 0.5s;
+    
+}
+.main-content .title-table{
+width: 60%;
+height: 8%;
+display: flex;
+background-color: #007F99;
+border-left:solid var(--color-bordes) 0.2vw;
+border-right:solid var(--color-bordes)  0.2vw;
+
+}
+.title-table .divi{
+width:16.6666667%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+border-right: solid var(--color-bordes) 0.2vw;
+text-transform: uppercase;
+font-family: cursive;
+font-size: 1vw;
+text-align: center;
+overflow: hidden;
+border-top: solid var(--color-bordes) 0.2vw;
+
+}
+.title-table .divix{
+    width:16.6666667%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-transform: uppercase;
+font-family: cursive;
+font-size: 1vw;
+text-align: center;
+overflow: hidden;
+border-top: solid var(--color-bordes) 0.2vw;
+}
+.main-content .container-put-rows{
+display: flex;
+width: 60%;
+height: 50%;
+border-right:solid var(--color-bordes) 0.2vw ;
+border-left:solid var(--color-bordes) 0.2vw ;   
+}
+.main-content .put-rows{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+background-color:var(--color-interno-tabla);
+overflow: hidden;
+flex-wrap: wrap;
+scroll-behavior: smooth;
+
+}
+.put-rows .row{
+width: 100%;
+height: 13.65%;
+display: flex;
+background-color:var(--color-interno-tabla);
+border-top:solid var(--color-bordes) 0.2vw ;
+
+}
+.row .rivi{
+    width:16.6666667%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-interno-tabla);
+    text-transform: uppercase;
+    font-family: cursive;
+    font-size: 1vw;
+    text-align: center;
+    overflow: hidden;
+    border-right:solid var(--color-bordes) 0.2vw ;
+
+}
+.row .rivix{
+    width:16.6666667%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-interno-tabla);
+    text-transform: uppercase;
+    font-family: cursive;
+    font-size: 1vw;
+    text-align: center;
+    overflow: hidden;
+    border-right:solid var(--color-bordes) 0.2vw ;
+text-decoration: none;
+}
+.rivix .mxm{
+    font-size: 2vw;
+    text-decoration: none;
+    color: #003B47;
+    transition: 0.4s;
+
+}
+.row .rivif{
+
+    width:16.6666667%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-interno-tabla);
+    text-transform: uppercase;
+    font-family: cursive;
+    overflow: hidden;
+    text-align: center;
+
+}
+.rivif .mxm{
+    font-size: 2vw;
+    text-decoration: none;
+    color: #003B47;
+    transition: 0.4s;
+}
+.mxm:hover{
+    color:darkslateblue;
+    transform: scale(1.4);
+}
+.main-content .navegation-rows{
+display:flex;
+border: solid var(--color-bordes) 0.2vw;
+width: 60%;
+height: 8%;
+background-color: #007F99;
+justify-content: center;
+align-items: center;
+
+}
+.navegation-rows .put-buttons{
+    display: flex;
+    width: 30%;
+    height: 80%;
+    background-color: #00BFE6;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3vw;
+    color: white;
+  
+    border-radius: 1vw;
+
+    }
+    .put-buttons .fica{
+  transition: 0.5s;
+    }
+.fica:hover{
+    transform: scale(1.4);
+    color: red;
+cursor: pointer;
+}
+#cerrar-crud{
+width: 10%;
+height: 5%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: 1vw;
+background-color: #007F99;
+color: white;
+font-family: cursive;
+font-size: 1vw;
+position: relative;
+top: 74%;
+cursor: pointer;
+}
+.ver{
+    opacity: 1;
+    pointer-events: auto;
+}
+.desvanecer{
+    opacity: 0;
+    pointer-events: none;
+}
